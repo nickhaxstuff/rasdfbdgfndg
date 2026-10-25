@@ -1,16 +1,3 @@
-plugins { id 'com.android.application' }
-
-android {
-    namespace 'com.nickflix.firetv'
-    compileSdk 35
-    buildFeatures { buildConfig true }
-    defaultConfig {
-        applicationId 'com.nickflix.firetv'
-        minSdk 23
-        targetSdk 28
-        versionCode 2
-        versionName '1.1.0'
-        def site = project.findProperty('siteUrl') ?: System.getenv('NICKFLIX_SITE_URL') ?: 'https://nickflix.netlify.app/'
-        buildConfigField 'String', 'SITE_URL', '"' + site.toString() + '"'
-    }
+plugins {
+    id 'com.android.application' version '8.7.3' apply false
 }
